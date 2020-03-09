@@ -1,0 +1,36 @@
+<h2>Files</h2>
+<p>RSDB_X.tar.gz - remote sensing package RSDB to access remote sensing database</p>
+<p>documentation.R - instructions to get documentation in R</p>
+<p>basics.R - starting point for RSDB R-package usage</p>
+<p>examples/rasterdb_processing.R - examples of RasterDB (hyperpectral) raster data processing</p>
+<p>examples/rasterdb_hypersprectral_processing.R - examples of RasterDB hyperpectral raster data processing</p>
+<p>examples/pointcloud_processing.R - examples of PointCloud (LiDAR) point data and index processing</p>
+<p>examples/pointdb_processing.R - examples of PointDB (LiDAR) point data processing</p>
+<p>examples/pointdb_index_processing.R - examples of PointDB(LiDAR) index processing</p>
+<h2>Installation of R-Package for connection to RSDB server</h2>
+<h2>from remote (GitHub) source: (recommended, dependencies will be installed automatically)</h2>
+<p>if(!require("remotes")) install.packages("remotes")</p>
+<p>remotes::install_github("environmentalinformatics-marburg/rsdb/r-package")</p>
+<p>library(RSDB)</p>
+<p>??RSDB</p>
+<h2>from local package:</h2>
+<p>Download the package "RSDB_X.tar.gz" from this folder and install in R.</p>
+<p>install.packages("path_to_package/RSDB_X.tar.gz", repos=NULL, type="source")</p>
+<h2>installation dependencies for RSDB:</h2>
+<ul>
+  <li>R6</li>
+  <li>httr</li>
+  <li>jsonlite</li>
+  <li>openssl</li>
+  <li>raster</li>
+  <li>rgdal</li>
+</ul>
+<p>optional dependencies:</p>
+<ul>
+  <li>rgl (for visualisation in rgl::plot3d, RSDB::visualise_raster)</li>
+  <li>lidR (for LiDAR processing in R)</li>
+  <li>rlas (for LiDAR processing in R)</li>
+  <li>data.table (for LiDAR processing in R)</li>
+  <li>hsdar (Hyperspectral processing in R)</li>
+  <li>mapview (for visualisation in mapview::cubeview, mapview::plainview)</li>
+</ul>
