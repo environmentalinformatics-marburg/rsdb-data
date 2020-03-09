@@ -1,0 +1,17 @@
+type: RasterDB
+version: 1
+ref:
+  pixel_size: {x: 0.25, y: 0.25}
+  offset: {x: 596900.0, y: 5671400.0}
+  code: EPSG:32632
+  proj4: '+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs '
+bands:
+  1: {type: 2, title: intensity}
+  2: {type: 2, title: elevation}
+associated: {pointcloud: lidar_forest_edge}
+acl: []
+acl_mod: []
+description: ratserized poindcloud lidar_forest_edge
+tags: []
+local_extent: {xmin: 189, ymin: 271, xmax: 2781, ymax: 2452}
+storage_type: TileStorage

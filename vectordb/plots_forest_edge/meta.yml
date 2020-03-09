@@ -1,0 +1,7 @@
+type: vectordb
+acl: [admin]
+acl_mod: [admin]
+tags: []
+data_filename: plots_forest_edge.gpkg
+name_attribute: plot
+structured_access: {poi: false, roi: true}
