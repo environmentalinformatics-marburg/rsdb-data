@@ -11,7 +11,7 @@ Or download this distribution with git:
 git clone --depth 1 -b master https://github.com/environmentalinformatics-marburg/rsdb-data.git
 ```
 
-This RSDB distribution is runnable on Windows and on Ubuntu.
+This RSDB distribution is runnable on **Windows** and on **Ubuntu**.
 
 ## Run on Windows 10 64bit
 
@@ -21,7 +21,7 @@ Doubleclick `win_server.cmd` to run RSDB server. Stop it by closing the console 
 
 No dependencies are needed as `java` and `gdal` for Windows 10 64bit are included.
 
-Files of patten `win_*.cmd` are executable for Windows.
+Files of pattern `win_*.cmd` are executable for Windows.
 
 ## Run on Ubuntu
 
@@ -48,8 +48,6 @@ Press ctrl-c to stop RSDB server.
 
 If your local RSDB is running currently you can directly click on this link to open RSDB web-interface. (For freshly started RSDB server, wait a few seconds until "Server running.." is printed on the terminal.)
 
-For a started RSDB server
-
 This URL can also be used for access by the [RSDB R-package](https://environmentalinformatics-marburg.github.io/rsdb/docs/r_package_installation).
 
 
@@ -63,7 +61,7 @@ You can use the original example data files located in subfolders of `example-da
 ---
 ### Dataset lidar_forest_edge
 
-This is a dataset of LiDAR Data covering an edge of the forest.
+This is a dataset of LiDAR data covering an edge of the forest.
 
 Original dataset is located at `example-data/lidar_forest_edge`
 
