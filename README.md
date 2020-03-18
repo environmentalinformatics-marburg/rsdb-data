@@ -111,6 +111,8 @@ Based on the plot mask, pixels of resolution of 1 meter should be filled at plot
 
 The point cloud task `index_raster` can be specified and submitted on the web interface or on the command line. ([see documentation](https://environmentalinformatics-marburg.github.io/rsdb/docs/tasks/))
 
+![pointcloud_task index_raster](images/pointcloud_task_index_raster.png)
+
 Parameters:
 
 **task_pointcloud**: "index_raster" *// task name*  
