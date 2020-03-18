@@ -64,7 +64,7 @@ mapview::mapview(sfData)
 # get extent of plots
 plot_extent <- sf::st_bbox(sfData)
 
-# create raster for mask
+# create raster for lidar indices
 r <- raster::raster(vals=0, resolution=1, xmn=plot_extent$xmin, ymn=plot_extent$ymin, xmx=plot_extent$xmax, ymx=plot_extent$ymax, crs=proj4)
 
 # create mask of plots
@@ -76,11 +76,11 @@ raster::values(r_mask)[raster::values(r_mask) == 0] <- NA
 # show raster plot mask
 mapview::mapview(r_mask)
 
-# create new raster layer in RSDB (plot mask)
-remotesensing$create_rasterdb("plots_forest_edge_mask")
+# create new raster layer in RSDB (plots_forest_edge_indices)
+remotesensing$create_rasterdb("plots_forest_edge_indices", proj4=proj4, storage_type="TileStorage")
 
-# get raster layer (plot mask)
-maskLayer <- remotesensing$rasterdb("plots_forest_edge_mask")
+# get raster layer (plots_forest_edge_indices)
+maskLayer <- remotesensing$rasterdb("plots_forest_edge_indices")
 
-# upload mask raster into RSDB
-maskLayer$insert_RasterLayer(r_mask)
+# upload plot mask into RSDB raster layer plots_forest_edge_indices at band 1 with band title "plot mask"
+maskLayer$insert_RasterLayer(r_mask, band=1, band_title="plot mask")

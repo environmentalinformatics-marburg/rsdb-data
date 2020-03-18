@@ -1,7 +1,10 @@
 # RSDB distribution with example datasets
 
-This distribution contains RSDB and example datasets.
-The example datasets are already inserted into RSDB and additionally the original example dataset files are in folder example-data.
+This distribution contains RSDB. example datasets and example R-scripts.
+
+The example datasets are already inserted into RSDB and additionally the original example dataset files are in folder `example-data`.
+
+Example R-scripts are located in folder `example-data/r_script`.
 
 
 [Download this distribution as zip-file](https://github.com/environmentalinformatics-marburg/rsdb-data/archive/master.zip)
@@ -95,3 +98,29 @@ Refresh you browser window (by pressing "F5") to update list of contained layers
 This dataset contains plot definitions as polygons in a GeoPackage file. The plot areas are covered by the lidar dataset lidar_forest_edge.
 
 Original dataset is located at `example-data/plots_forest_edge/plots_forest_edge.gpkg`
+
+---
+## Example processing
+
+Processing R script is located at `example-data/r_script`
+
+The script uploads a plot mask into RSDB as raster layer `plots_forest_edge_indices` at band 1 with title `plot mask`.
+
+Aim of the following:  
+Based on the plot mask, pixels of resolution of 1 meter should be filled at plot areas with point cloud index calculation values by task `index_raster`.
+
+The point cloud task `index_raster` can be specified and submitted on the web interface or on the command line. ([see documentation](https://environmentalinformatics-marburg.github.io/rsdb/docs/tasks/))
+
+Parameters:
+
+**task_pointcloud**: "index_raster" *// task name*  
+**pointcloud**: "lidar_forest_edge" *// source point cloud layer*  
+**rasterdb**: "plots_forest_edge_indices" *// target raster layer with mask at band 1*  
+**indices**: "BE_H_MEAN" *// indices to calculate for each pixel*  
+**mask_band**: 1 *// the previously created band 1 should be used*  
+
+Following task specification will be generated if the parameter arguments have been typed into the web interface:
+
+{ "task_pointcloud": "index_raster", "pointcloud": "lidar_forest_edge", "rasterdb": "plots_forest_edge_indices", "indices": [ "BE_H_MEAN" ], "mask_band": 1 }
+
+This task specification can be submitted by the `Submit` button or at command line it can be typed directly and submitted.
