@@ -1,6 +1,8 @@
 # RSDB distribution with example datasets
 
-This distribution contains RSDB. example datasets and example R-scripts.
+![overview](images/overview.jpg)
+
+This distribution contains RSDB, example datasets and example R-scripts.
 
 The example datasets are already inserted into RSDB and additionally the original example dataset files are in folder `example-data`.
 
@@ -99,6 +101,8 @@ This dataset contains plot definitions as polygons in a GeoPackage file. The plo
 
 Original dataset is located at `example-data/plots_forest_edge/plots_forest_edge.gpkg`
 
+![viewer lidar_forest_edge](images/viewer_lidar_forest_edge.png)
+
 ---
 ## Example processing
 
@@ -126,3 +130,5 @@ Following task specification will be generated if the parameter arguments have b
 { "task_pointcloud": "index_raster", "pointcloud": "lidar_forest_edge", "rasterdb": "plots_forest_edge_indices", "indices": [ "BE_H_MEAN" ], "mask_band": 1 }
 
 This task specification can be submitted by the `Submit` button or at command line it can be typed directly and submitted.
+
+![viewer plots_forest_edge_indices](images/viewer_plots_forest_edge_indices.png)
