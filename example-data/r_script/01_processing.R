@@ -84,3 +84,5 @@ maskLayer <- remotesensing$rasterdb("plots_forest_edge_indices")
 
 # upload plot mask into RSDB raster layer plots_forest_edge_indices at band 1 with band title "plot mask"
 maskLayer$insert_RasterLayer(r_mask, band=1, band_title="plot mask")
+
+# On the web interface the task index_raster needs to be run to fill the now prepared raster layer plots_forest_edge_indices with index values.
