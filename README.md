@@ -6,7 +6,9 @@ This distribution contains RSDB, example datasets and example R-scripts.
 
 The example datasets are already inserted into RSDB and additionally the original example dataset files are in folder `example-data`.
 
-Example R-scripts are located in folder `example-data/r_script`.
+Example R-scripts are located in folder `example-data/r_script`. [(--> documentation of processing by R-scripting)](processing)
+
+
 
 
 [Download this distribution as zip-file](https://github.com/environmentalinformatics-marburg/rsdb-data/archive/master.zip)
@@ -16,7 +18,7 @@ Or download this distribution with git:
 git clone --depth 1 -b master https://github.com/environmentalinformatics-marburg/rsdb-data.git
 ```
 
-This RSDB distribution is runnable on **Windows** and on **Ubuntu**.
+This RSDB distribution is runnable on **Windows** and on **Ubuntu**. 
 
 ## Run on Windows 10 64bit
 
@@ -132,3 +134,6 @@ Following task specification will be generated if the parameter arguments have b
 This task specification can be submitted by the `Submit` button or at command line it can be typed directly and submitted.
 
 ![viewer plots_forest_edge_indices](images/viewer_plots_forest_edge_indices.png)
+
+
+## [(--> documentation of processing by R-scripting)](processing)
