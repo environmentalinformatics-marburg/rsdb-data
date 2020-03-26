@@ -6,7 +6,7 @@ This distribution contains RSDB, example datasets and example R-scripts.
 
 The example datasets are already inserted into RSDB and additionally the original example dataset files are in folder `example-data`.
 
-Example R-scripts are located in folder `example-data/r_script`. [(--> documentation of processing by R-scripting)](processing)
+Example R-scripts are located in folder `example-data/r_script`. [(--> documentation of processing by R-scripting)](processing.md)
 
 
 
@@ -109,6 +109,7 @@ Original dataset is located at `example-data/plots_forest_edge/plots_forest_edge
 ## Example processing
 
 Processing R script is located at `example-data/r_script`
+[(--> documentation of processing by R-scripting)](processing.md)
 
 The script uploads a plot mask into RSDB as raster layer `plots_forest_edge_indices` at band 1 with title `plot mask`.
 
@@ -136,4 +137,4 @@ This task specification can be submitted by the `Submit` button or at command li
 ![viewer plots_forest_edge_indices](images/viewer_plots_forest_edge_indices.png)
 
 
-## [(--> documentation of processing by R-scripting)](processing)
+## [(--> documentation of processing by R-scripting)](processing.md)
