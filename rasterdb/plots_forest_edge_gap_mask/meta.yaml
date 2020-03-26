@@ -1,0 +1,15 @@
+type: RasterDB
+version: 1
+ref:
+  pixel_size: {x: 1.0, y: 1.0}
+  offset: {x: 596966.594036673, y: 5671474.17583054}
+  code: EPSG:32632
+  proj4: '+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs '
+bands:
+  1: {type: 1}
+associated: {}
+acl: []
+acl_mod: []
+tags: []
+local_extent: {xmin: 0, ymin: 0, xmax: 589, ymax: 522}
+storage_type: TileStorage

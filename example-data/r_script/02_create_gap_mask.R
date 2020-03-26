@@ -16,11 +16,11 @@ remotesensing <- RSDB::RemoteSensing$new(url = "http://127.0.0.1:8081")
 #remotesensing$rasterdbs
 
 # get raster layer 'plots_forest_edge_indices' with index vegetation_coverage_02m_points at band 2
-rasterdb <- remotesensing$rasterdb("plots_forest_edge_indices")
-#rasterdb <- remotesensing$rasterdb("forest_edge_indices")
+#rasterdb <- remotesensing$rasterdb("plots_forest_edge_indices")
+rasterdb <- remotesensing$rasterdb("forest_edge_indices")
 ext <- rasterdb$extent
-r <- rasterdb$raster(ext = ext, band = 2)
-#r <- rasterdb$raster(ext = ext, band = 1)
+#r <- rasterdb$raster(ext = ext, band = 2)
+r <- rasterdb$raster(ext = ext, band = 1)
 mapview::mapview(r)
 
 # get projection
@@ -34,12 +34,12 @@ r@data@values <- ifelse(r@data@values > percentage, 1, 0)
 mapview::mapview(r)
 
 # create a new raster layer for the gap_mask
-remotesensing$create_rasterdb("plots_forest_edge_gap_mask", proj4=proj4)
-#remotesensing$create_rasterdb("forest_edge_gap_mask", proj4=proj4)
+#remotesensing$create_rasterdb("plots_forest_edge_gap_mask", proj4=proj4, storage_type="TileStorage")
+remotesensing$create_rasterdb("forest_edge_gap_mask", proj4=proj4, storage_type="TileStorage")
 
 # get raster layer
-rasterdb_gap_mask <- remotesensing$rasterdb("plots_forest_edge_gap_mask")
-#rasterdb_gap_mask <- remotesensing$rasterdb("forest_edge_gap_mask")
+#rasterdb_gap_mask <- remotesensing$rasterdb("plots_forest_edge_gap_mask")
+rasterdb_gap_mask <- remotesensing$rasterdb("forest_edge_gap_mask")
 
 # insert gap_mask raster data into raster layer
 rasterdb_gap_mask$insert_RasterLayer(r)
