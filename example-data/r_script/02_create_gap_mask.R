@@ -2,8 +2,9 @@
 
 if(!require("remotes")) install.packages("remotes")
 
-# install RSDB package and automatically install updated versions
+# Install RSDB package and automatically install updated versions.
 remotes::install_github("environmentalinformatics-marburg/rsdb/r-package")
+# In some cases a restart of R is needed to work with a updated version of RSDB package (in RStudio - Session - Terminate R).
 
 
 library(RSDB)
@@ -21,7 +22,7 @@ rasterdb <- remotesensing$rasterdb("forest_edge_indices")
 ext <- rasterdb$extent
 #r <- rasterdb$raster(ext = ext, band = 2)
 r <- rasterdb$raster(ext = ext, band = 1)
-mapview::mapview(r)
+mapview::mapview(r, homebutton = FALSE) # workaround for bug(?) in mapview with homebutton
 
 # get projection
 proj4 <- rasterdb$proj4
@@ -31,7 +32,7 @@ percentage <- 0.8
 r@data@values <- ifelse(r@data@values > percentage, 1, 0)
 
 # view gap_mask
-mapview::mapview(r)
+mapview::mapview(r, homebutton = FALSE) # workaround for bug(?) in mapview with homebutton
 
 # create a new raster layer for the gap_mask
 #remotesensing$create_rasterdb("plots_forest_edge_gap_mask", proj4=proj4, storage_type="TileStorage")

@@ -1,7 +1,8 @@
 if(!require("remotes")) install.packages("remotes")
 
-# install RSDB package and automatically install updated versions
+# Install RSDB package and automatically install updated versions.
 remotes::install_github("environmentalinformatics-marburg/rsdb/r-package")
+# In some cases a restart of R is needed to work with a updated version of RSDB package (in RStudio - Session - Terminate R).
 
 
 library(RSDB)
@@ -59,7 +60,7 @@ proj4 <- vectordb$proj4
 sfData <- vectordb$getVectors()
 
 # show plot polygons
-mapview::mapview(sfData)
+mapview::mapview(sfData, homebutton = FALSE) # workaround for bug(?) in mapview with homebutton
 
 # get extent of plots
 plot_extent <- sf::st_bbox(sfData)
@@ -74,7 +75,7 @@ r_mask <- raster::mask(r, mask = sfData, inverse=TRUE, updatevalue = 1)
 raster::values(r_mask)[raster::values(r_mask) == 0] <- NA
 
 # show raster plot mask
-mapview::mapview(r_mask)
+mapview::mapview(r_mask, homebutton = FALSE) # workaround for bug(?) in mapview with homebutton
 
 # create new raster layer in RSDB (plots_forest_edge_indices)
 remotesensing$create_rasterdb("plots_forest_edge_indices", proj4=proj4, storage_type="TileStorage")

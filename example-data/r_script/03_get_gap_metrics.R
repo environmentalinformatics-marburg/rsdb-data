@@ -1,5 +1,8 @@
 if(!require("remotes")) install.packages("remotes")
+
+# Install RSDB package and automatically install updated versions.
 remotes::install_github("environmentalinformatics-marburg/rsdb/r-package")
+# In some cases a restart of R is needed to work with a updated version of RSDB package (in RStudio - Session - Terminate R).
 
 
 library(RSDB)
@@ -81,7 +84,7 @@ vectordb_plots <- remotesensing$vectordb("plots_forest_edge")
 plot_vectors <- vectordb_plots$getVectors()
 
 #view plot_vectors
-fig<-mapview::mapview(plot_vectors)
+fig<-mapview::mapview(plot_vectors, homebutton = FALSE) # workaround for bug(?) in mapview with homebutton
 fig
 
 #get raster layer with gap_mask which we created in the previous script
@@ -95,11 +98,11 @@ gap_mask[gap_mask==1]<-0
 gap_mask[is.na(gap_mask)]<-1
 
 #view gap_mask
-fig+mapview::mapview(gap_mask)
+#fig+mapview::mapview(gap_mask, homebutton = FALSE) # workaround for bug(?) in mapview with homebutton and other bug in mapview?
 
 # The gap_mask raster is converted to a patch raster by assining all touching gap cells a unique patch ID using a connected component labeling alogrithm
 patch_map<-landscapemetrics::get_patches(gap_mask,1)[[1]]
-fig+mapview::mapview(patch_map)
+#fig+mapview::mapview(patch_map, homebutton = FALSE) # workaround for bug(?) in mapview with homebutton and other bug in mapview?
 
 
 # Get the summary gap statisitcs for all polygons
