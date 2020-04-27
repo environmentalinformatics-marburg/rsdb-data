@@ -78,7 +78,7 @@ web-interface `Tools` - `Task` - Category `PointCloud` - Task `import`
 
 Insert task parameters. At the bottom the summary of the resulting task is shown which should be the following:
 
-`{ "task_pointcloud": "import", "pointcloud": "lidar_forest_edge", "source": "example-data/lidar_forest_edge", "storage_type": "TileStorage" }`
+`{ "task_pointcloud": "import", "pointcloud": "lidar_forest_edge", "source": "example-data/lidar_forest_edge", "storage_type": "TileStorage"} `
 
 Click `Submit` and wait a few seconds to finish the task.
 

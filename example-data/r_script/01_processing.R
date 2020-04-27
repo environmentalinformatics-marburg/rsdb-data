@@ -14,7 +14,7 @@ library(RSDB)
 remotesensing <- RSDB::RemoteSensing$new(url = "http://127.0.0.1:8081")
 
 # list point cloud layers
-remotesensing$plointclouds
+remotesensing$pointclouds
 
 # list raster layers
 remotesensing$rasterdbs

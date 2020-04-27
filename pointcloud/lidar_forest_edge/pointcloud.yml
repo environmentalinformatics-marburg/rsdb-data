@@ -3,8 +3,10 @@ attributes:
   1: {encoding: 1, name: y}
   2: {encoding: 1, name: z}
   3: {encoding: 3, name: intensity}
-  4: {encoding: 4, name: classification}
-  5: {encoding: 5, name: scanAngleRank}
+  4: {encoding: 4, name: returnNumber}
+  5: {encoding: 4, name: returns}
+  6: {encoding: 4, name: classification}
+  7: {encoding: 5, name: scanAngleRank}
 storage_type: TileStorage
 type: pointcloud
 version: 1.0.1
@@ -12,8 +14,8 @@ cellscale: 100.0
 cellsize: 100.0
 celloffset: {x: 5969.0, y: 56714.0}
 code: EPSG:32632
-proj4: '+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs '
+proj4: +proj=utm +zone=32 +datum=WGS84 +units=m +no_defs
 acl: []
 acl_mod: []
-associated: {rasterdb: lidar_forest_edge_rasterized}
+associated: {}
 tags: []
