@@ -17,5 +17,5 @@ code: EPSG:32632
 proj4: +proj=utm +zone=32 +datum=WGS84 +units=m +no_defs
 acl: []
 acl_mod: []
-associated: {}
+associated: {rasterdb: lidar_forest_edge_rasterized, roi_groups: plots_forest_edge}
 tags: []
