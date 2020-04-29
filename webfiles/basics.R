@@ -21,7 +21,7 @@ remotesensing$pointdbs
 pointdb <- remotesensing$pointdb("be_hai_lidar_06_classified")
 
 # get names of PointClouds
-remotesensing$pointclouds
+remotesensing$plointclouds
 # get one pointcloud
 pointcloud <- remotesensing$pointcloud("jannik_uniwald_sequoia")
 

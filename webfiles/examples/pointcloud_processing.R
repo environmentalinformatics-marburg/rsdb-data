@@ -11,7 +11,7 @@ userpwd <- readChar(fileName, file.info(fileName)$size) # optional read account 
 remotesensing <- RemoteSensing$new("http://137.248.191.215:8081", userpwd) # remote server
 
 # get pointcloud names
-remotesensing$pointclouds
+remotesensing$plointclouds
 
 # open pointcloud
 pointcloud <- remotesensing$pointcloud("jannik_uniwald_sequoia")
