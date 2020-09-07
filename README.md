@@ -2,9 +2,9 @@
 
 ![overview](images/overview.jpg)
 
-This distribution contains RSDB, example datasets and example R-scripts.
+This distribution contains [RSDB](https://github.com/environmentalinformatics-marburg/rsdb), example datasets and example R-scripts.
 
-If issues with RSDB arise please refer to our [troubleshooting page](https://github.com/environmentalinformatics-marburg/rsdb/wiki/Troubleshooting).
+If issues with RSDB arise please refer to our [documentation](https://environmentalinformatics-marburg.github.io/rsdb) and to our [troubleshooting page](https://github.com/environmentalinformatics-marburg/rsdb/wiki/Troubleshooting).
 
 The example datasets are already inserted into RSDB and additionally the original example dataset files are in folder `example-data`.
 
