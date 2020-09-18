@@ -1,7 +1,7 @@
 # RSDB distribution with example datasets
 
 *This distribution contains [RSDB](https://github.com/environmentalinformatics-marburg/rsdb), example datasets and example R-scripts.*  
-*If issues with RSDB arise please refer to our [documentation](https://environmentalinformatics-marburg.github.io/rsdb) and to our [troubleshooting page](https://github.com/environmentalinformatics-marburg/rsdb/wiki/Troubleshooting).*
+*If issues with RSDB arise, please refer to our [documentation](https://environmentalinformatics-marburg.github.io/rsdb) and to our [troubleshooting page](https://github.com/environmentalinformatics-marburg/rsdb/wiki/Troubleshooting).*
 
 ![overview](images/overview.jpg)
 
@@ -20,6 +20,8 @@ This RSDB distribution is runnable on **Windows** and on **Ubuntu**.
 ## Run on Windows 10 64bit
 
 Extract the zip-file on a short path without spaces in it, e.g. to `C:/rsdb`
+
+It is indispensable to place RSDB on a short **path without spaces**. wrong: `C:/my files/my rsdb` correct: `C:/data/testing/rsdb` 
 
 Doubleclick `win_server.cmd` to run RSDB server. Stop it by closing the console window.
 
