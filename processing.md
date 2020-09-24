@@ -60,3 +60,20 @@ This script loads the raster data from RSDB which resulted from the previous scr
 ![viewer_forest_edge_gap_mask](images/viewer_forest_edge_gap_mask.jpg)
 
 **Note**: You can directly run this script because in the example package the processed raster layer `forest_edge_gap_mask` is uploaded into RSDB already.
+
+## 04_upload_hyperspectral.R
+
+This script loads a 160 band hyperspectral raster GeoTIFF file `hyperspectral_forest_edge.tif` and uploads the raster data into the new RasterDB layer `hyperspectral_forest_edge` in RSDB server. Band metadata (wavelength) is loaded from CSV file `hyperspectral_forest_edge_bands.csv` and inserted into the RasterDB layer.
+
+![viewer_hyperspectral_color](images/viewer_hyperspectral_color.jpg)
+
+## 05_hyperspectral_processing.R
+
+This script requests from RasterDB layer `hyperspectral_forest_edge` several on-the-fly processed index products.
+
+**Note**: You can directly run this script because in the example package the processed raster layer `forest_edge_gap_mask` is uploaded into RSDB already.
+
+![viewer_hyperspectral_tgi](images/viewer_hyperspectral_tgi.jpg)
+Raster products can be directly visualized on the web interface, here: Triangular greenness index (TGI).
+
+[-> Raster indices](https://github.com/environmentalinformatics-marburg/rsdb/wiki/Raster-indices)

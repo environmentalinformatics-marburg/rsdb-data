@@ -14,3 +14,4 @@ acl_mod: []
 tags: []
 local_extent: {xmin: 0, ymin: 0, xmax: 589, ymax: 522}
 storage_type: TileStorage
+tile_pixel_len: 256

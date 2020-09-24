@@ -15,3 +15,4 @@ description: ratserized poindcloud lidar_forest_edge
 tags: []
 local_extent: {xmin: 189, ymin: 271, xmax: 2781, ymax: 2452}
 storage_type: TileStorage
+tile_pixel_len: 256
