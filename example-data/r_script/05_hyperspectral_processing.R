@@ -33,7 +33,7 @@ plot_vectors <- vectordb$getVectors()
 # polygon of plot1
 plot_polygon <- plot_vectors$geometry[plot_vectors$plot == "plot1"]
 
-# get all raster at plot1 with all bands
+# get raster at plot1 with all bands
 r <- rasterdb$raster(ext = plot_polygon)
 plot(r)
 

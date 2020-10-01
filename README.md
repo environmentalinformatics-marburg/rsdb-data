@@ -21,7 +21,7 @@ This RSDB distribution is runnable on **Windows** and on **Ubuntu**.
 
 Extract the zip-file on a short path without spaces in it, e.g. to `C:/rsdb`
 
-It is indispensable to place RSDB on a short **path without spaces**. wrong: `C:/my files/my rsdb` correct: `C:/data/testing/rsdb` 
+:warning: It is indispensable to place RSDB on a short **path without spaces and without special characters like parenthesis**. wrong: `C:/my files/my rsdb` correct: `C:/data/testing/rsdb` 
 
 Doubleclick `win_server.cmd` to run RSDB server. Stop it by closing the console window.
 
@@ -53,6 +53,8 @@ Press ctrl-c to stop RSDB server.
 **Web-interface**: Per default your local RSDB server is running at [http://127.0.0.1:8081](http://127.0.0.1:8081)
 
 If your local RSDB is running currently you can directly click on this link to open RSDB web-interface. (For freshly started RSDB server, wait a few seconds until "Server running.." is printed on the terminal.)
+
+In rare cases the web interface may be loaded incomplete. If this is the case, refresh your browser page (by pressing "F5").
 
 This URL can also be used for access by the [RSDB R-package](https://environmentalinformatics-marburg.github.io/rsdb/docs/r_package_installation).
 
