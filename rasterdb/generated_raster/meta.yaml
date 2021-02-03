@@ -1,0 +1,19 @@
+type: RasterDB
+version: 1
+ref:
+  pixel_size: {x: 1.0825, y: 0.9875}
+  offset: {x: 609932.0, y: 5674236.0}
+  code: EPSG:32632
+  proj4: '+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs '
+bands:
+  1: {type: 2, title: generated data}
+associated: {}
+acl: []
+acl_mod: []
+tags: []
+local_extent: {xmin: 0, ymin: 0, xmax: 399, ymax: 399}
+storage_type: TileStorage
+tile_pixel_len: 256
+time_slices:
+  0: {name: 2020-05}
+  1: {name: 2020-08}
