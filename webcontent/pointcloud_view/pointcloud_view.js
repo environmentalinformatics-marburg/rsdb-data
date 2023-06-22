@@ -23,8 +23,14 @@ function init() {
 				scene: undefined,
 				controls: undefined,
 				particleSystem: undefined,
-				viewTypes: ["all", "0. Not Classified", "1. Unclassified", "2. Ground", "3. Low Vegetation", "4. Medium Vegetation", "5. High Vegetation", "6. Building", "7. Low Point Noise", "8. Model Key-point", "9. Water", "12. Overlap Points", "13. (unofficial) Vegetation"],
-				viewTypeMap: { "all": -1, "0. Not Classified": 0, "1. Unclassified": 1, "2. Ground": 2, "3. Low Vegetation": 3, "4. Medium Vegetation": 4, "5. High Vegetation": 5, "6. Building": 6, "7. Low Point Noise": 7, "8. Model Key-point": 8, "9. Water": 9, "12. Overlap Points": 12, "13. (unofficial) Vegetation": 13 },
+				viewTypes: ["all", "0. Not Classified", "1. Unclassified", "2. Ground", "3. Low Vegetation", "4. Medium Vegetation", "5. High Vegetation", "6. Building", "7. Low Point Noise", "8. Model Key-point", "9. Water", "12. Overlap Points", "13. (unofficial) Vegetation",
+				"14", "15", "16", "17", "18", "19",
+				"20. (non standard) Vegetation", "21", "22", "23", "24", "25", "26", "27", "28", "29",
+				"30", "31"],
+				viewTypeMap: { "all": -1, "0. Not Classified": 0, "1. Unclassified": 1, "2. Ground": 2, "3. Low Vegetation": 3, "4. Medium Vegetation": 4, "5. High Vegetation": 5, "6. Building": 6, "7. Low Point Noise": 7, "8. Model Key-point": 8, "9. Water": 9, "12. Overlap Points": 12, "13. (unofficial) Vegetation": 13,
+				"14": 14, "15": 15, "16": 16, "17": 17, "18": 18, "19": 19,
+				"20. (non standard) Vegetation": 20, "21": 21, "22": 22, "23": 23, "24": 24, "25": 25, "26": 26, "27": 27, "28": 28, "29": 29,
+				"30": 30, "31": 31},
 				viewType: "all",
 				viewColors: ['classified', 'grey', 'color'],
 				viewColor: 'classified',
@@ -120,6 +126,11 @@ function init() {
 				} else {
 					var queryParameters = {};
 					queryParameters.ext = "" + (qx - radius) + " " + (qy - radius) + " " + (qx + radius) + " " + (qy + radius);
+					
+					if(this.urlParameters.time_slice_id !== undefined) {
+						queryParameters.time_slice_id = this.urlParameters.time_slice_id;
+					}
+					
 					switch(this.viewColor) {
 						case 'grey':
 							queryParameters.columns = "x y z";
@@ -394,7 +405,10 @@ function init() {
 					query.pointcloud = this.urlParameters.pointcloud;
 				}
 				query.x = this.urlParameters.x;
-				query.y = this.urlParameters.y;				
+				query.y = this.urlParameters.y;
+				if(this.urlParameters.time_slice_id !== undefined) {
+					query.time_slice_id = this.urlParameters.time_slice_id;
+				}				
 				this.$router.push({ path: '/', query: query });
 			},
 
@@ -407,6 +421,9 @@ function init() {
 				}
 				parameters.x = this.$route.query.x;
 				parameters.y = this.$route.query.y;
+				if(this.$route.query.time_slice_id !== undefined) {
+					parameters.time_slice_id = this.$route.query.time_slice_id;
+				}
 				if(this.urlParameters.db !== parameters.db || this.urlParameters.pointcloud !== parameters.pointcloud || this.urlParameters.x !== parameters.x || this.urlParameters.y !== parameters.y) {
 					this.urlParameters = parameters;
 				}
